@@ -1,0 +1,129 @@
+---
+// Kiroshiya V1 Core - Artisanal Dataset Configuration
+const mockProducts = [
+  {
+    name: "MOCK PRODUCT NAME 01",
+    category: "Crochet Category Specific",
+    price: "₹MOCK PRICE",
+    specs: "Mock Specifications Profile"
+  },
+  {
+    name: "MOCK PRODUCT NAME 02",
+    category: "Crochet Category Specific",
+    price: "₹MOCK PRICE",
+    specs: "Mock Specifications Profile"
+  },
+  {
+    name: "MOCK PRODUCT NAME 03",
+    category: "Crochet Category Specific",
+    price: "₹MOCK PRICE",
+    specs: "Mock Specifications Profile"
+  }
+];
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Kiroshiya | Handcrafted Crochet Boutique</title>
+	</head>
+	<body class="bg-[#FFF5F5] text-[#3A3335] font-sans min-h-screen selection:bg-[#F2DFE1] selection:text-[#3A3335]">
+		
+		<!-- 🎀 LOGO-MATCHED PREMIUM HEADER -->
+		<header class="border-b border-[#F5E1E3] bg-[#FFF5F5]/90 backdrop-blur-md sticky top-0 z-50 transition-all duration-300">
+			<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+				<a href="#" class="flex items-center gap-2 group">
+					<div class="w-10 h-10 rounded-full bg-white border border-[#E8D0D2] flex items-center justify-center font-serif text-xs font-bold text-[#8C727A] shadow-sm">🧶</div>
+					<span class="text-lg font-bold tracking-[0.25em] text-[#5A464C] uppercase">KIROSHIYA</span>
+				</a>
+				<nav class="hidden md:flex items-center space-x-8 text-xs font-bold tracking-widest text-[#8A7178] uppercase">
+					<a href="#home" class="text-[#3A3335] transition-colors">Home</a>
+					<a href="#about" class="hover:text-[#3A3335] transition-colors">Our Story</a>
+					<a href="#showcase" class="hover:text-[#3A3335] transition-colors">Collection</a>
+					<a href="#policies" class="hover:text-[#3A3335] transition-colors">Policies</a>
+				</nav>
+				<button class="px-5 py-2.5 rounded-full text-xs font-bold bg-[#8C727A] hover:bg-[#735D64] text-white shadow-sm hover:shadow-md transition-all duration-300">
+					Enquire via WhatsApp
+				</button>
+			</div>
+		</header>
+
+		<main class="max-w-7xl mx-auto px-6 py-12 space-y-24">
+			
+			<!-- 🧵 HERO SPOTLIGHT BANNER -->
+			<section id="home" class="text-center py-16 relative overflow-hidden">
+				<div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#FADCE0]/40 blur-[100px] rounded-full pointer-events-none"></div>
+				<span class="text-xs font-bold tracking-[0.3em] text-[#A68891] uppercase mb-4 block">Handmade With Love</span>
+				<h2 class="text-3xl md:text-5xl font-light tracking-tight text-[#3A3335] mb-6 max-w-2xl mx-auto leading-tight uppercase font-serif">
+					Crochet Artistry. <br/><span class="font-sans font-black text-[#5A464C]">Intentionally Handmade.</span>
+				</h2>
+				<p class="text-[#6E5960] text-sm md:text-base max-w-xl mx-auto font-normal leading-relaxed">
+					Kiroshiya was founded with a passion for quality and design, bringing together a curated collection of artisanal products and everyday essentials.
+				</p>
+			</section>
+
+			<!-- 📦 PRODUCT SHOWCASE -->
+			<section id="showcase" class="scroll-mt-24">
+				<div class="flex items-center justify-between mb-8 border-b border-[#F5E1E3] pb-4">
+					<h3 class="text-xs font-bold tracking-widest uppercase text-[#5A464C] flex items-center gap-2">
+						<span class="w-1.5 h-1.5 rounded-full bg-[#A68891]"></span>
+						Product Showcase (70–80 Units Dataset)
+					</h3>
+					<span class="text-[9px] font-mono tracking-wider text-[#A68891] uppercase bg-white px-2.5 py-1 rounded-md border border-[#F5E1E3]">Reusable Component Grid</span>
+				</div>
+
+				<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+					{mockProducts.map((product) => (
+						<div class="group bg-white/60 border border-[#F5E1E3] hover:border-[#E8D0D2] rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_15px_30px_rgba(140,114,122,0.06)] backdrop-blur-sm cursor-pointer">
+							<div class="aspect-[4/5] w-full bg-[#FDF0F1] flex flex-col items-center justify-center p-6 text-center border-b border-[#F5E1E3] relative group-hover:bg-[#FCE7E9] transition-colors duration-500">
+								<span class="text-2xl mb-2 opacity-60">🧶</span>
+								<p class="text-xs font-bold tracking-widest text-[#A68891] uppercase">Mock Product Image</p>
+								<p class="text-[10px] text-[#C4A9B1] mt-1 uppercase">{product.category}</p>
+							</div>
+							<div class="p-6 bg-white/40">
+								<h4 class="font-bold text-sm text-[#3A3335] group-hover:text-[#8C727A] transition-colors duration-300 tracking-wide">
+									{product.name}
+								</h4>
+								<p class="text-[11px] text-[#8A7178] mt-1">{product.specs}</p>
+								<div class="mt-4 flex items-center justify-between pt-2 border-t border-[#FBF0F1]">
+									<span class="text-sm font-black text-[#5A464C] tracking-wider">{product.price}</span>
+									<span class="text-[10px] font-bold text-[#8C727A] tracking-wider uppercase group-hover:underline flex items-center gap-1">
+										View Details →
+									</span>
+								</div>
+							</div>
+						</div>
+					))}
+				</div>
+			</section>
+
+			<!-- 📑 ABOUT & STORE POLICIES INTEGRATION -->
+			<section id="about" class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-[#F5E1E3] scroll-mt-24">
+				<div class="space-y-3">
+					<h4 class="text-xs font-bold tracking-widest text-[#5A464C] uppercase">About Us: Our Craft Journey</h4>
+					<p class="text-xs text-[#6E5960] leading-relaxed">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					</p>
+				</div>
+				<div id="policies" class="space-y-3 scroll-mt-24">
+					<h4 class="text-xs font-bold tracking-widest text-[#5A464C] uppercase">Shipping & Delivery Policy</h4>
+					<p class="text-xs text-[#6E5960] leading-relaxed">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Processing timelines and localized delivery fulfillments scale automatically across regional networks.
+					</p>
+				</div>
+				<div class="space-y-3">
+					<h4 class="text-xs font-bold tracking-widest text-[#5A464C] uppercase">Returns & Refunds Policy</h4>
+					<p class="text-xs text-[#6E5960] leading-relaxed">
+						Our products are entirely slow-crafted by hand with strict quality management. Review full terms regarding cancellation validations, replacement timelines, or exchange processing inquiries.
+					</p>
+				</div>
+			</section>
+
+		</main>
+
+		<footer class="border-t border-[#F5E1E3] mt-32 py-12 text-center text-[10px] text-[#A68891] font-bold tracking-[0.2em] uppercase">
+			&copy; 2026 Kiroshiya Studio | Policies | Shipping | Contact Us
+		</footer>
+	</body>
+</html>
